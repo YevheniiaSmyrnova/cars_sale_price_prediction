@@ -1,0 +1,8 @@
+sklearn:
+    image: ruimashita/scikit-learn
+    volumes:
+        - .:/code
+    working_dir: /code
+    command: |
+      /bin/bash -c "pip install -r requirements.txt &&
+      python prediction.py"
