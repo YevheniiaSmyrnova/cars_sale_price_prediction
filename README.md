@@ -53,4 +53,6 @@ Sale price of the car is predicted with accuracy 68%
 
 ![Screenshot](year_of_registration.png)
 
+![Screenshot](distance_km.png)
 
+![Screenshot](power_PS.png)
