@@ -1,4 +1,4 @@
-# SCIKIT-LEARN: LINEAR REGRESSION
+# SCIKIT-LEARN
 
 ## Description
 
