@@ -27,7 +27,7 @@ def normalize_data(df):
     return df
 
 
-def plot(x, y, xlabel, ylabel='price'):
+def plot(x, y, xlabel, ylabel='price (USD)'):
     plt.scatter(x, y,  color='black')
     plt.title('How the {} depends on the {}'. format(ylabel, xlabel))
     plt.xlabel(xlabel)
@@ -42,7 +42,7 @@ def main():
 
     # print df[df.columns[1:-1]].apply(lambda x: x.corr(df['price']))
 
-    df = normalize_data(df)
+    # df = normalize_data(df)
 
     x_train, x_test, y_train, y_test = train_test_split(
         df.drop('price', axis=1), df['price'], test_size=0.2, random_state=42)
@@ -55,7 +55,7 @@ def main():
     print r2_score(y_test, y_pred)
 
     plot(x_test.yearOfRegistration, y_test, 'year of registration')
-    plot(x_test.kilometer, y_test, 'kilometer')
+    plot(x_test.kilometer, y_test, 'distance km')
     plot(x_test.powerPS, y_test, 'power PS')
 
 if __name__ == '__main__':
